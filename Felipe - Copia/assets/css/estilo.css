@@ -1,0 +1,254 @@
+@import url(variaveis.css);
+@import url(resets.css);
+@import url(componentes.css);
+@import url(calculadora.css);
+
+.container {
+   width: 100%;
+   max-width: 1080px;
+   margin: 0 auto;
+}
+
+.container.centro {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height: 100%;
+}
+
+/* pagina index */
+.explicacao .titulo {
+   margin-top: .3rem;
+}
+
+.explicacao .texto {
+   margin-bottom: 2rem;
+   padding-left: 1.8rem;
+   text-align: justify;
+}
+
+body {
+   counter-reset: h3;
+}
+
+.explicacao .texto h3 {
+   margin-bottom: .5rem;
+}
+
+.explicacao .texto h3::before {
+   counter-increment: h3;
+   content: counter(h3) ". ";
+}
+
+.explicacao .texto p {
+   margin-bottom: .3rem;
+}
+
+.explicacao .texto p:first-of-type {
+   text-indent: 1.85rem;
+}
+
+.explicacao img {
+   display: flex;
+   margin: 1rem auto 0;
+}
+
+.cards-acessar-exercicios {
+   border: 1px solid var(--borda);
+   text-align: center;
+   margin: 3rem 6rem;
+   padding: 1rem;
+}
+
+.cards-acessar-exercicios .card-container {
+   justify-content: center;
+   margin-top: .9rem;
+}
+
+.cards-acessar-exercicios .card-container .card {
+   max-width: unset;
+   width: auto;
+}
+
+.container-forms form {
+   position: absolute;
+   top: 25%;
+   left: 50%;
+   transform: translate(-50%, -15%);
+
+   opacity: 0;
+   pointer-events: none;
+   transition: .3s ease;
+   background-color: var(--main-bg);
+}
+
+.container-forms form.active {
+   pointer-events: all;
+   opacity: 1;
+}
+
+.container-forms .btn-muda {
+   margin-top: -.3rem;
+   display: block;
+   text-align: center;
+   border: none;
+   width: 100%;
+}
+
+.container-forms .btn-muda:hover {
+   color: var(--btn);
+}
+
+.exercicio-container {
+   display: flex;
+   justify-content: space-around;
+   align-items: stretch;
+   width: 100%;
+   height: 100%;
+   gap: 1rem;
+}
+
+.calculator {
+   flex: 1;
+}
+
+.calculator,
+.enunciado {
+   box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .1);
+   border: 1px solid var(--borda);
+   border-radius: .25rem;
+}
+
+.enunciado {
+   display: grid;
+   grid-template-rows: 1fr auto;
+   width: 100%;
+   flex: 2;
+}
+
+.enunciado [data-questao] {
+   display: none;
+   justify-content: center;
+   align-items: start;
+   width: 100%;
+   flex-direction: column;
+}
+
+.enunciado [data-questao] header {
+   border-bottom: 1px solid var(--borda);
+   padding: 1rem;
+   width: 100%;
+}
+
+.enunciado [data-questao] header .titulo {
+   margin-bottom: 0;
+}
+
+.enunciado [data-questao] p {
+   font-size: 1.6rem;
+}
+
+.enunciado [data-questao] .body {
+   padding: 1rem;
+   width: 100%;
+}
+
+.enunciado [data-questao].active {
+   display: flex;
+}
+
+.enunciado .alternativas {
+   display: flex;
+   flex-direction: column;
+   margin-top: .6rem;
+}
+
+.enunciado .alternativas li {
+   display: flex;
+}
+
+.enunciado .alternativas li label {
+   display: flex;
+   gap: 0.3rem;
+}
+
+.enunciado .alternativas input[type="radio"] {
+   accent-color: var(--btn-hover);
+   transform: translateY(.25rem);
+}
+
+.enunciado footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   border-top: 1px solid var(--borda);
+   padding: 1rem;
+}
+
+.enunciado footer div {
+   display: flex;
+   align-items: center;
+   gap: 0.3rem;
+}
+
+.pontuacao {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: .6rem;
+   text-align: center;
+   width: 100%;
+   min-height: calc(86vh - 6rem);
+}
+
+.pontuacao h2.titulo {
+   margin-bottom: .6rem;
+}
+
+.container-perfil {
+   width: 100%;
+   gap: 1rem;
+}
+
+.container-perfil .perfil-linha {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 0.6rem;
+}
+
+.container-perfil .perfil-linha:not(:first-of-type) {
+   margin-top: 1rem;
+}
+
+.container-perfil .perfil-linha>div {
+   background-color: #fff;
+   border-radius: .25rem;
+   box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .1);
+   padding: 1rem;
+   height: 100%;
+   width: 100%;
+}
+
+.card-perfil {
+   display: flex;
+   gap: 1rem;
+}
+
+.card-perfil img {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   object-fit: cover;
+}
+
+.card-perfil h2 {
+   font-size: 1.6rem;
+   margin-bottom: .6rem;
+}
+
+.card-perfil p {
+   margin-bottom: .25rem;
+}

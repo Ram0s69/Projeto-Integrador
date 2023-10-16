@@ -1,0 +1,278 @@
+.header-principal {
+   box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .1);
+   background-color: var(--headerfooterbg);
+   height: 8vh;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 999;
+   font-size: 1.4rem;
+}
+
+.header-principal nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 100%;
+}
+
+.header-principal .logo a {
+   display: flex;
+   gap: 0.5rem;
+}
+
+.header-principal .logo a h1 {
+   font-weight: 300;
+}
+
+.header-principal ul {
+   display: flex;
+   justify-content: flex-end;
+   gap: .5rem;
+}
+
+.header-principal ul ul {
+   margin-right: 1rem;
+}
+
+.header-principal ul span {
+   margin-right: .2rem;
+}
+
+.header-principal a:hover:not(.btn) {
+   color: #333;
+}
+
+.header-principal .btn:hover {
+   background-color: var(--btn-hover);
+}
+
+
+.footer-principal {
+   background-color: var(--headerfooterbg);
+   height: 6vh;
+   font-size: 1.4rem;
+}
+
+.footer-principal .container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 1rem;
+   padding: 0 1rem;
+   width: 100%;
+
+   height: 6vh;
+}
+
+.titulo {
+   font-size: 2.4rem;
+   margin-bottom: 2rem;
+   font-weight: 600;
+}
+
+.subtitulo {
+   font-size: 2rem;
+   font-weight: 500;
+}
+
+.titulo.centro,
+.subtitulo.centro {
+   text-align: center;
+}
+
+.simbolo-matematico {
+   font-family: monospace, sans-serif;
+   background-color: #ddd;
+   border-radius: .25rem;
+   padding: 0 .3rem;
+   transition: .3s ease;
+   font-weight: 600;
+   white-space: nowrap;
+}
+
+.alerta {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: .6rem 1rem;
+   margin-bottom: 1rem;
+   border-radius: .25rem;
+   width: 100%;
+   color: #fff;
+}
+
+.alerta button {
+   border: none;
+   color: #fff;
+}
+
+.alerta.erro {
+   background: #e24343;
+}
+
+.alerta.sucesso {
+   background: #72c230;
+}
+
+.card-container {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   width: 100%;
+   gap: 1rem;
+}
+
+.titulo-exercicios {
+   margin-bottom: 1rem;
+}
+
+.card-container.centro {
+   justify-content: center;
+}
+
+.card {
+   width: 100%;
+   max-width: 300px;
+   border: 1px solid var(--borda);
+   border-radius: .25rem;
+   box-shadow: 0 .125rem .25rem rgb(0 0 0 / 10%);
+   transition: .3s ease;
+   padding: 1rem;
+}
+
+.card img {
+   width: 100%;
+   border-radius: .25rem;
+}
+
+.card:hover {
+   box-shadow: 0 .125rem .25rem rgb(0 0 0 / 20%);
+}
+
+.card .card-content h3 {
+   font-style: 1.3rem;
+   margin-bottom: .9rem;
+}
+
+.card .card-btn {
+   background-color: var(--btn);
+   color: #fff;
+   border-radius: .25rem;
+   padding: .3rem .6rem;
+   cursor: pointer;
+}
+
+.card .card-btn:hover {
+   background-color: var(--btn-hover);
+}
+
+
+.btn {
+   padding: .4rem .6rem;
+   border-radius: .25rem;
+   background-color: var(--btn);
+   color: white;
+   cursor: pointer;
+   transition: .3s ease;
+}
+
+a.btn {
+   padding: 0.24rem .6rem;
+}
+
+.btn.outline {
+   background-color: transparent;
+   border: 1px solid var(--btn);
+   color: var(--btn);
+}
+
+.btn.outline:hover {
+   border: 1px solid var(--btn-hover);
+   color: var(--btn-hover);
+}
+
+.btn:hover:not(.outline) {
+   background-color: var(--btn-hover);
+}
+
+.container-form {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+form:not(.unstyled) {
+   display: grid;
+   align-items: start;
+   flex: 1;
+   width: 100%;
+   max-width: 400px;
+   height: max-content;
+}
+
+form label {
+   margin-bottom: 0.2rem;
+}
+
+form .linha {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   gap: 0.6rem;
+}
+
+form .linha>* {
+   flex: 1;
+}
+
+form .linha div {
+   display: flex;
+   flex-direction: column;
+}
+
+form .mensagem-apoio {
+   margin-top: -.3rem;
+   margin-bottom: .6rem;
+   color: #999;
+}
+
+form input,
+form select,
+form textarea {
+   margin-bottom: .6rem;
+   width: 100%;
+}
+
+.tabela-container {
+   overflow-x: auto;
+   width: 100%;
+}
+
+.tabela-container.mb {
+   margin-bottom: 3rem;
+}
+
+table {
+   width: 100%;
+   white-space: nowrap;
+   border-collapse: collapse;
+}
+
+table th,
+table td {
+   padding: .5rem;
+   text-align: left;
+   border-bottom: 1px solid #ddd;
+}
+
+table td .linha-tabela {
+   display: flex;
+   align-items: center;
+   gap: 0.3rem;
+}
+
+table th {
+   background-color: #f2f2f2;
+}

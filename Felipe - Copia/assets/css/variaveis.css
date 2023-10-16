@@ -1,0 +1,11 @@
+:root {
+   --headerfooterbg: #0e69f0;
+   --bodybg: #54bbff;
+
+   --mainbg: #f6f6f6;
+
+   --btn: #0a8ae0;
+   --btn-hover: rgb(231, 227, 0);
+
+   --borda: #ccc;
+}
